@@ -4,32 +4,30 @@
   <title>EddystoneURLDemo</title>
   <script src="eddystone-advertising.js"></script>
   <style>
+
+  html, 
+  body {
+      height: 100%;
+  }
+
   body {
     margin: 0;
-    background: black;
+    background: white;
+    display: flex;           /* establish flex container */
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center; 
   }
-  .left {
-    transform: translateX(-100%);
-  }
-  .right {
-    transform: translateX(100%);
-  }
-  img {
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: auto;
-    max-width: 100%;
-    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+
+  #id_input {
+    width: 300px;
+    margin: 5px;
+    text-align: center; 
   }
   </style>
 </head>
 <body>
-    <img class="center" src="assets/adidas.jpg" id="adidas">
-    <img class="right" src="assets/nike.jpg" id="nike">
+    <input id="id_input" placeholder="beacon id"></input>
 </body>
-<script src="img-switcher.js"></script>
+<script src="controller.js"></script>
 </html>

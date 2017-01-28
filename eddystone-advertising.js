@@ -317,7 +317,8 @@
     'http://www.',
     'https://www.',
     'http://',
-    'https://'
+    'https://',
+    'jeeves://'
   ];
 
   /**
