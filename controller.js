@@ -22,9 +22,11 @@
         return;
       }
       // unregister existing ads
-      current_adv.unregisterAdvertisement()
-        .then(() => eddystone.registerAdvertisement(new_adv))
-        .then(adv => current_adv = adv);
+      if (current_adv) {
+        current_adv.unregisterAdvertisement()
+          .then(() => eddystone.registerAdvertisement(new_adv))
+          .then(adv => current_adv = adv);
+      }
     }
   };
 
